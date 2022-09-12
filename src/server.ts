@@ -3,14 +3,12 @@
 /**
  * Module dependencies.
  */
-
+import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import { debug } from "console";
 var app = require("./app");
-var debug = require("debug")("parlour-api:server");
 var http = require("http");
 
-/**
- * Get port from environment and store in Express.
- */
+dotenv.config();
 
 var port = normalizePort(process.env.PORT || "3001");
 app.set("port", port);
