@@ -8,6 +8,7 @@ var indexRouter = require("./routes/index");
 var authRouter = require("./routes/auth");
 var usersRouter = require("./routes/users");
 var shopsRouter = require("./routes/shops");
+import passport from "passport";
 
 var app = express();
 
