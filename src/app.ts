@@ -6,9 +6,8 @@ var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var authRouter = require("./routes/auth");
-var usersRouter = require("./routes/users");
-var shopsRouter = require("./routes/shops");
-import passport from "passport";
+var userRouter = require("./routes/user");
+var storiesRouter = require("./routes/stories");
 
 var app = express();
 
@@ -21,8 +20,8 @@ app.use(cookieParser());
 
 app.use("/", indexRouter);
 app.use("/auth", authRouter);
-app.use("/users", usersRouter);
-app.use("/shops", shopsRouter);
+app.use("/user", userRouter);
+app.use("/stories", storiesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
